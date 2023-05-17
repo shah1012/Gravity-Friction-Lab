@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friction Lab</title>
+    <link rel="stylesheet" href="../styles/Friction.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="linkContainer">
+        <ul class="linkList">
+          <li class="link">
+            <a href="../routes/Gravity.html">Gravity Lab</a>
+          </li>
+          <li class="link">
+            <a href="../routes/Friction.html">Friction Lab</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <canvas class="canvas" width="1000" height="650"></canvas>
+      <script defer type="module" src="../scripts/Friction.js"></script>
+
+      <div class="controlPanel">
+        <ul>
+          <li class="row">
+            <img
+              src="../assets/pause.png"
+              class="plypsImg"
+              alt="play pause icon"
+            />
+            <img src="../assets/reset.png" class="resetImg" alt="reset icon" />
+          </li>
+          <li>
+            <label>Coefficent of Friction</label>
+            <input
+              type="range"
+              min="0.05"
+              value="0.05"
+              max="0.55"
+              step="0.01"
+              class="frictRange"
+              oninput="this.nextElementSibling.value = this.value"
+            />
+            <output>0.05</output>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

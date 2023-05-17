@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Physics Engine</title>
+    <link rel="stylesheet" href="../styles/Gravity.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="linkContainer">
+        <ul class="linkList">
+          <li class="link">
+            <a href="../routes/Gravity.html">Gravity Lab</a>
+          </li>
+          <li class="link">
+            <a href="../routes/Friction.html">Friction Lab</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <canvas width="1000" height="650"></canvas>
+
+      <div class="controlPanel">
+        <ul>
+          <li class="row">
+            <button class="gravBtn">Gravity: On</button>
+            <img class="resetImg" src="../assets/reset.png" alt="" />
+          </li>
+          <li class="motionVals">
+            <div class="velX"></div>
+            <div class="velY"></div>
+            <div class="accX"></div>
+            <div class="accY"></div>
+          </li>
+          <li class="row"></li>
+          <li class="gravSlider">
+            <label>Gravity</label>
+            <input
+              type="range"
+              min="0.05"
+              value="0.05"
+              max="0.2"
+              step="0.01"
+              class="gravRange"
+              oninput="this.nextElementSibling.value = this.value"
+            />
+            <output>0.05</output>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="module" defer src="../scripts/Gravity.js"></script>
+  </body>
+</html>
